@@ -1,5 +1,3 @@
-from idlelib.pyshell import fix_x11_paste
-
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -61,7 +59,6 @@ def logout():
     session.pop('user_id', None)
     session.pop('username', None)
     return redirect(url_for('login'))
-fix_x11_paste()
 
 
 
